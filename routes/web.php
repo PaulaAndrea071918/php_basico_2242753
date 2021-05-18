@@ -66,16 +66,25 @@ Route::get('paises' , function(){
             "moneda" => "Guarani",
             "poblacion"=> 7
 
+
+        ],
+
+        "Canada" => [
+
+           "capital" => "Ottawa",
+           "moneda" => "Dolar",
+           "poblacion"=> 37.59
+
          ]
      ];
 
-     foreach($paises as $indice => $valor){
-         echo "<h1> $indice <h1>";
-         echo"<pre>";
-         print_r($valor ["capital"]);
-         echo "</pre>";
-         echo"<hr />";
-     }
-
+     // mostrar la vista de los paises
+     //Llevar el arreglo de paises
+     return view('paises')->with("naciones" , $paises);
 
 });
+
+
+
+
+
