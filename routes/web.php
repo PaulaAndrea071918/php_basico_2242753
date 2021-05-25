@@ -85,6 +85,13 @@ Route::get('paises' , function(){
 });
 
 
+Route::get('mostrar_formulario', 'MetabuscadorController@mostrar_formulario');
+
+Route::post('buscar_termino', 'MetabuscadorController@buscar_termino');
+
+
+
+
 
 
 
